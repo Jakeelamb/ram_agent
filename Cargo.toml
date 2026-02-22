@@ -1,0 +1,17 @@
+[package]
+name = "ram_agent"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+name = "ram_agent"
+path = "src/lib.rs"
+
+[dependencies]
+tokio = { version = "1", features = ["rt", "sync", "time", "macros"] }
+sysinfo = "0.38"
+thiserror = "2"
+
+[dev-dependencies]
+tokio = { version = "1", features = ["rt-multi-thread", "sync", "time", "macros", "test-util"] }
+futures = "0.3"
